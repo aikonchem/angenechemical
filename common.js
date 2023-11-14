@@ -97,3 +97,4 @@ function getSmiles3(){
     document.form1.submit();
 }
 
+
