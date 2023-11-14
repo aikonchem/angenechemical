@@ -41,14 +41,9 @@ jQuery(function ($) {
 })
 function dosearch(){
     jQuery(function($) {
-        var content = $("input[name='inp-search']").val().trim();
-        if (content.length <= 5) {
-            $('#myModal').modal('show');
-        }else{
-            var array = { "inp-search":content };
-            var content = jQuery.param(array);
-           /* window.open(BASE_URL+"goods/Goods/search?"+content, "_self");*/
-        }
+        var content = $(".search-inp").val().trim();
+        var type = $('.searchItemActive').attr('data');
+        window.open("/search?search="+type+"&key="+content, "_self");
     });
 }
 
@@ -96,5 +91,4 @@ function getSmiles3(){
     document.getElementById('searchType').value='3';
     document.form1.submit();
 }
-
 
